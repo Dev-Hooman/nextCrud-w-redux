@@ -38,7 +38,7 @@ async function SearchResults({ params }) {
                             const limit = 35
 
                             return (
-                                <div className='mb-4'>
+                                <div key={_id} className='mb-4'>
                                     <div className="card w-full md:max-w-md bg-base-100 shadow-xl">
                                         <figure className='relative'>
                                             <Image
