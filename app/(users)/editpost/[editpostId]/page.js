@@ -18,7 +18,7 @@ const fetchBlogPost = async (blogPageId) => {
 
 async function EditPost({ params }) {
 
-  const post = await fetchBlogPost(params.editpost);
+  const post = await fetchBlogPost(params.editpostId);
 
   console.log("edit post :", post);
 
@@ -28,7 +28,7 @@ async function EditPost({ params }) {
   return (
     <div className='h-screen flex justify-center items-center'>
 
-      <UpdateForm post={post} postId={params.editpost} />
+      <UpdateForm post={post} postId={params.editpostId} />
 
 
 
