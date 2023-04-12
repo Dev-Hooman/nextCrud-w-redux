@@ -3,7 +3,8 @@ import { notFound } from 'next/navigation'
 import UpdateForm from './UpdateForm'
 
 
-const baseURL = process.env.NEXT_SERVER_URL
+const baseURL = process.env.NEXT_PUBLIC_SERVER_URL
+
 
 export const dynamicParams = true;
 
