@@ -1,8 +1,6 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
 import UpdateForm from './UpdateForm'
-import { use } from 'react'
-
 
 
 const baseURL = process.env.NEXT_SERVER_URL
@@ -19,9 +17,9 @@ const fetchBlogPost = async (blogPageId) => {
 
 }
 
-function EditPost({ params }) {
+async function EditPost({ params }) {
 
-  const post = use(fetchBlogPost(params.editpost))
+  const post = await fetchBlogPost(params.editpost);
 
   console.log("edit post :", post);
 
