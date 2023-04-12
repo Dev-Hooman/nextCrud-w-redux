@@ -1,13 +1,10 @@
 'use client'
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAllBlogData } from '../app/GlobalRedux/Features/posts/postSlice';
 
 const DeleteButton = ({ blogPostId, children }) => {
   const dispatch = useDispatch()
-  const router = useRouter();
-
 
   const deleteItem = async () => {
     const baseURL = process.env.NEXT_PUBLIC_SERVER_URL
