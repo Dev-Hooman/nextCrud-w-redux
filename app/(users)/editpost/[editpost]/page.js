@@ -6,8 +6,6 @@ import UpdateForm from './UpdateForm'
 const baseURL = process.env.NEXT_PUBLIC_SERVER_URL
 
 
-export const dynamicParams = true;
-
 const fetchBlogPost = async (blogPageId) => {
   const id = blogPageId?.toString(); // convert to string
   const res = await fetch(`${baseURL}/getdata/${id}`,

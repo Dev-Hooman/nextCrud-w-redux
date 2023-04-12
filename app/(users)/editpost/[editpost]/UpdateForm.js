@@ -5,8 +5,6 @@ function UpdateForm({ post , postId}) {
 
     const baseURL = process.env.NEXT_PUBLIC_SERVER_URL
 
-    const [blogPost, setBlogPost] = React.useState([])
-
     const [formfields, setFormfields] = React.useState({
         title: post.title,
         content: post.content,
@@ -15,8 +13,7 @@ function UpdateForm({ post , postId}) {
         photo: post.photo
     });
 
-    const [file, setFile] = React.useState('');
-    const [filename, setFilename] = React.useState('Choose File');
+
     const { title, content, category, author, photo } = formfields
 
     const handleOnChange = (event) => {
